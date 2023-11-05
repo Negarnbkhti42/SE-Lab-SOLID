@@ -24,11 +24,11 @@ public class PhoneOrderService implements OrderService {
     
     @Override
     public void phoneOrderPayment(int foodPrice){
-        System.out.println("on-Site Payment with Price : " + foodPrice + " Tomans!");
+        System.out.println("phone Payment with Price : " + foodPrice + " Tomans!");
     }
 
     @Override
     public void phoneOrderRegister(String customerName){
-        System.out.println("online order registered for " + customerName);
+        System.out.println("phone order registered for " + customerName);
     }
 }
