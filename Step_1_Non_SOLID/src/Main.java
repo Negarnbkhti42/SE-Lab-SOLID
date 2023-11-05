@@ -1,6 +1,7 @@
 import PaymentServices.OnSiteOrderService;
 import PaymentServices.OnlineOrderService;
 import PaymentServices.OrderService;
+import PaymentServices.PhoneOrderService;
 
 import java.util.Scanner;
 
@@ -35,7 +36,7 @@ public class Main {
         }
 
         //Step2 : Select Payment Method
-        System.out.println("Enter Your Payment Method (1 for online and 2 for on-site):");
+        System.out.println("Enter Your Payment Method (1 for online, 2 for on-site, and 3 for phone call):");
         customerAnswerForPaymentMethod = scanner.nextInt();
         if(customerAnswerForPaymentMethod==1){
             orderService = new OnlineOrderService();
@@ -43,14 +44,19 @@ public class Main {
         } else if(customerAnswerForPaymentMethod==2){
             orderService = new OnSiteOrderService();
             orderService.onSiteOrderRegister(customerName);
+        } else if(customerAnswerForPaymentMethod==3) {
+            orderService = new PhoneOrderService();
+            orderService.phoneOrderRegister(customerName);
         }
 
         //Step3 : pay price
         System.out.println("Pay Price:");
         if(orderService instanceof OnlineOrderService){
             orderService.onlineOrderPayment(order.getTotalPrice());
-        } else if(orderService instanceof OnSiteOrderService){
+        } else if(orderService instanceof OnSiteOrderService) {
             orderService.onSiteOrderPayment(order.getTotalPrice());
+        }else if(orderService instanceof PhoneOrderService) {
+            orderService.phoneOrderPayment(order.getTotalPrice());
         }
 
         //Finally Print Bill
