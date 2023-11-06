@@ -184,7 +184,7 @@
 <p><strong>موارد نقض</strong></p>
 </td>
 <td>
-<p>&nbsp;</p>
+<p>نمی‌توان روش‌های مختلف پرداخت را جایگزین یکدیگر کرد. در کلاس onlineOrderService تابع OnlineOrderRegister سفارش را ثبت می‌کند و در PhoneOrderService تابع PhoneOrderRegister. در نتیجه تابعی که برای یکی از پیاده‌سازی‌های orderService سفارش را ثبت می‌کند، برای پیاده‌سازی دیگر کاری نمی‌کند.</p>
 </td>
 </tr>
 <tr>
@@ -247,24 +247,24 @@
 </tr>
 <tr>
 <td width="168">
-<p>&nbsp;</p>
+<p>Liskov Substitution Principle</p>
 </td>
 <td width="246">
-<p>&nbsp;</p>
+<p>نمی‌توان روش‌های مختلف پرداخت را جایگزین یکدیگر کرد.</p>
 </td>
 <td width="284">
-<p>&nbsp;</p>
+<p>در واسط OrderService تنها دو تابع RegisterService و pay را انتزاع می‌کنیم. هر روش پرداخت تنها این دو تابع را پیاده‌سازی می‌کند.</p>
 </td>
 </tr>
 <tr>
 <td width="168">
-<p>&nbsp;</p>
+<p>Interface Segregation Principle</p>
 </td>
 <td width="246">
-<p>&nbsp;</p>
+<p>هر کدام از کلاس‌هایی که واسط Order Service را پیاده‌سازی می‌کردند مجبور بودند تمامی توابع آن را voerride کنند. در حالی که بدنه توابعی که مربوط به آن نوع از پرداخت نبودند خالی می‌ماندند.</p>
 </td>
 <td width="284">
-<p>&nbsp;</p>
+<p>در واسط OrderService تنها دو تابع RegisterService و pay را انتزاع می‌کنیم. هر روش پرداخت تنها این دو تابع را پیاده‌سازی می‌کند.</p>
 </td>
 </tr>
 <tr>
